@@ -1,0 +1,55 @@
+<div id="app">
+  <div class="login-header">
+    <%#= link_to(svg_asset('talenize_logo', {height: 40}), "https://talenize.com") %>
+  </div>
+  <main>
+    <div class="login-bg"></div>
+    <section class="login">
+        <div class="login-card">
+            <h1 class="login-card-title talenize-black-text">Login</h1>
+            Username: <%= email_field :username, class: 'form-control', placeholder: t('.usernameholder') %><br>
+              Password: <%= password_field :password, class: 'form-control', placeholder: t('.passwordholder') %>
+        </div>
+                <div class="form-group form-group-flex form-group-center form-group-top">
+                   <%#= f.submit "Log in", class: "btn btn-outline-light btn-lg" %> 
+                  
+                </div>
+
+                <div class="form-group form-group-flex form-group-center form-group-top">
+                  <a href="/new">Sign_up</a>
+                 <%#= button_to "SIGN UP", url: '/new', username: "username", remote: true, class: 'btn'  %>
+                </div>
+            <%#= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form login-card-form"}) do |f| %>
+            <%# <form action="#" class="form login-card-form"> %>
+                <div class="form-group">
+                    <div class="form-input-icon">
+                        <svg class="icon icon-user">
+                            <use xlink:href="<%= asset_path('images/sprite.symbol.svg#user') %>" href="<%= asset_path('images/sprite.symbol.svg#user') %>"></use>
+                        </svg>
+                        <%#= f.email_field :email, autofocus: true, class:'form-input talenize-black-text', placeholder: "Email" %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-input-icon">
+                        <svg class="icon icon-lock">
+                            <use xlink:href="<%= asset_path('images/sprite.symbol.svg#lock') %>" href="<%= asset_path('images/sprite.symbol.svg#lock') %>"></use>
+                        </svg>
+                        <%#= svg_asset('sprite.symbol', class: "icon icon-user") %>    
+                        <%#= f.password_field :password, autocomplete: "off", class:'form-input talenize-black-text', placeholder: "Password" %>
+                    </div>
+                </div>
+                <div class="form-group form-group-flex">
+                    <div class="form-checkbox">
+                        <%#= f.check_box :remember_me  %>
+                        <%#= f.label :remember_me, style: 'font-weight: normal; color: rgb(48, 48, 48);' %>
+                    </div>
+                    <%#= link_to "Forgot password?", new_password_path(resource_name), class: "button-link button-link-orange" %>
+                </div>
+            <% #end %>
+          
+        </div>
+    </section>
+  </main>
+
+  <%#= render "layouts/footer" %>
+</div>
