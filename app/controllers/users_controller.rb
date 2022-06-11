@@ -4,6 +4,9 @@ def new
 		@user = User.new
 	end
 
+	def show
+	end
+
 	def create
 		@user = User.new(user_param)
 		if @user.save
@@ -18,4 +21,5 @@ def new
 	def user_param
 		params.require(:user).permit(:username, :email, :password)
 	end
+
 end
